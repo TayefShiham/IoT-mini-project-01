@@ -4,6 +4,7 @@
 
 Any machine made after the fall of soviet union should work as long as in can be interfaced with. Here are the specs of the computer we used for this project : 
 
+```
              .',;::::;,'.                tayef@kg-06sleipnir 
          .';:cccccccccccc:;,.            ------------------- 
       .;cccccccccccccccccccccc;.         OS: Fedora Linux 38 (Workstation Edition) x86_64 
@@ -23,5 +24,6 @@ cccccccc;.:odl:.;cccccccccccccc:,.       CPU: Intel i3-7100U (4) @ 2.400GHz
 :cccccccccccccccccccccccccccc:'.         GPU: Intel HD Graphics 620 
 .:cccccccccccccccccccccc:;,..            Memory: 7793MiB 
   '::cccccccccccccc::;,.
+```
 
 The codebase should work out of the box on other Linux systems with Apt,Pacman,YUM and other PKG managers as long as the upcoming steps are followed properly. On Windows NT family OS, please set up the Windows Subsystem for Linux. For MacOS ,please stop reading this and pick a different profession.
