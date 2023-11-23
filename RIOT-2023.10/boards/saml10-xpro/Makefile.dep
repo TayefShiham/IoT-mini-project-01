@@ -1,1 +1,0 @@
-include $(RIOTBOARD)/common/saml1x/Makefile.dep

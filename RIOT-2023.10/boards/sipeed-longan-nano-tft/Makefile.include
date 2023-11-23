@@ -1,2 +1,0 @@
-INCLUDES += -I$(RIOTBOARD)/sipeed-longan-nano/include
-include $(RIOTBOARD)/sipeed-longan-nano/Makefile.include

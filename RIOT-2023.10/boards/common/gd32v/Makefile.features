@@ -1,3 +1,0 @@
-CPU = gd32v
-
-FEATURES_PROVIDED += riotboot

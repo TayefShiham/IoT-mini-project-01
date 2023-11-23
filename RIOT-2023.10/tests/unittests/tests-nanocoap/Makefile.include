@@ -1,2 +1,0 @@
-USEMODULE += nanocoap
-USEMODULE += nanocoap_token_ext

@@ -1,3 +1,0 @@
-ifneq (,$(filter entropy_source_adc_noise,$(USEMODULE)))
-  FEATURES_REQUIRED += periph_adc
-endif

@@ -1,2 +1,0 @@
-# This package can only be used with the Nuclei-based MCUs
-FEATURES_REQUIRED += arch_nuclei

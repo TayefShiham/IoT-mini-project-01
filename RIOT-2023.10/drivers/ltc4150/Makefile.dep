@@ -1,3 +1,0 @@
-FEATURES_REQUIRED += periph_gpio
-FEATURES_REQUIRED += periph_gpio_irq
-USEMODULE += ztimer64_usec

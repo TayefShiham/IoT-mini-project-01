@@ -1,3 +1,0 @@
-RIOTBASE ?= $(CURDIR)/../../..
-BOARD ?= samr21-xpro
-include $(CURDIR)/../../Makefile.tests_common

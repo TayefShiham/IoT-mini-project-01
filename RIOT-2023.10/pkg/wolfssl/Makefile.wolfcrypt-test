@@ -1,8 +1,0 @@
-MODULE = wolfcrypt-test
-
-NO_AUTO_SRC = 1
-
-#Add to enable wolfcrypt self tests
-SRC += test.c
-
-include $(RIOTBASE)/Makefile.base

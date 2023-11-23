@@ -1,3 +1,0 @@
-MODULE = utensor-ops
-
-include $(RIOTBASE)/Makefile.base

@@ -1,3 +1,0 @@
-USEMODULE += ztimer_core
-USEMODULE += ztimer_mock
-USEMODULE += ztimer64

@@ -1,5 +1,0 @@
-SRC := base58.c
-
-CFLAGS += -Wno-unused-parameter
-
-include $(RIOTBASE)/Makefile.base

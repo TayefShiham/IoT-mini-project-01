@@ -1,3 +1,0 @@
-INCLUDES += -I$(RIOTBOARD)/rpi-pico/include
-
-include $(RIOTBOARD)/rpi-pico/Makefile.include

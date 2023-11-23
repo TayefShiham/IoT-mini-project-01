@@ -1,4 +1,0 @@
-ifneq (,$(filter netdev_default,$(USEMODULE)))
-  USEMODULE += cc1100
-  USEMODULE += cc110x_868mhz
-endif

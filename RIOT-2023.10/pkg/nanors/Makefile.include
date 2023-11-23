@@ -1,2 +1,0 @@
-INCLUDES += -I$(PKGDIRBASE)/nanors
-INCLUDES += -I$(PKGDIRBASE)/nanors/deps/obl

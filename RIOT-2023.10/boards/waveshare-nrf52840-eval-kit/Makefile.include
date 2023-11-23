@@ -1,1 +1,0 @@
-include $(RIOTBOARD)/common/nrf52/Makefile.include

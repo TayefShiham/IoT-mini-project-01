@@ -1,4 +1,0 @@
-INCLUDES += -I$(RIOTBOARD)/common/stm32/include
-
-# Setup of programmer and serial is shared between STM32 based boards
-include $(RIOTMAKE)/boards/stm32.inc.mk

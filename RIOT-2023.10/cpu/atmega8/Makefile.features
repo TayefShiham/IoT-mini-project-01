@@ -1,3 +1,0 @@
-CPU_FAM = atmega8
-
-include $(RIOTCPU)/atmega_common/Makefile.features

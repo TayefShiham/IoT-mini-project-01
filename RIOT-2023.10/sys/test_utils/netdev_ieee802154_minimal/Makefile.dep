@@ -1,7 +1,0 @@
-USEMODULE += event
-USEMODULE += event_thread
-USEMODULE += l2util
-USEMODULE += od
-USEMODULE += od_string
-USEMODULE += shell
-USEMODULE += netdev

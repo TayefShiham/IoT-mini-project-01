@@ -1,2 +1,0 @@
-USEMODULE += ztimer
-USEMODULE += ztimer_usec

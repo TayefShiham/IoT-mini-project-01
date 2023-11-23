@@ -1,2 +1,0 @@
-# Include default FRDM board config
-include $(RIOTBOARD)/common/frdm/Makefile.include

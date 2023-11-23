@@ -1,3 +1,0 @@
-BOARD_INSUFFICIENT_MEMORY := \
-    stm32f7508-dk \
-    #

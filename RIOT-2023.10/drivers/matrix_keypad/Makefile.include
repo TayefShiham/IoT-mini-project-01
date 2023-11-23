@@ -1,2 +1,0 @@
-USEMODULE_INCLUDES_matrix_keypad := $(LAST_MAKEFILEDIR)/include
-USEMODULE_INCLUDES += $(USEMODULE_INCLUDES_matrix_keypad)

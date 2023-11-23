@@ -1,5 +1,0 @@
-USEMODULE += boards_common_atxmega
-
-ifneq (,$(filter saul_default,$(USEMODULE)))
-  USEMODULE += saul_gpio
-endif

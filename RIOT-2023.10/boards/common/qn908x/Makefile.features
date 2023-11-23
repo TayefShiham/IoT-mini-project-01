@@ -1,3 +1,0 @@
-CPU ?= qn908x
-
-# Put defined MCU peripherals here (in alphabetical order)

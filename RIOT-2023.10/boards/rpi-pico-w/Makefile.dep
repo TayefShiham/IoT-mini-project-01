@@ -1,1 +1,0 @@
-include $(RIOTBOARD)/rpi-pico/Makefile.dep

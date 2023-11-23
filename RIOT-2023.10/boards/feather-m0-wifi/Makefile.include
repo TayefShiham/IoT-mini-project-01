@@ -1,2 +1,0 @@
-INCLUDES  += -I$(RIOTBOARD)/feather-m0/include
-include $(RIOTBOARD)/feather-m0/Makefile.include

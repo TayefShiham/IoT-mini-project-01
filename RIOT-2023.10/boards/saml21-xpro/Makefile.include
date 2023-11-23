@@ -1,3 +1,0 @@
-CFLAGS += -D__SAML21J18A__
-
-include $(RIOTMAKE)/boards/sam0.inc.mk

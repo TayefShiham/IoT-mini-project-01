@@ -1,2 +1,0 @@
-USEMODULE += ztimer_usec
-FEATURES_REQUIRED += periph_gpio

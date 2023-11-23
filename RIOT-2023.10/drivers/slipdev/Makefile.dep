@@ -1,9 +1,0 @@
-USEMODULE += eui_provider
-USEMODULE += netdev_legacy_api
-USEMODULE += netdev_register
-USEMODULE += tsrb
-FEATURES_REQUIRED += periph_uart
-
-ifneq (,$(filter slipdev_stdio,$(USEMODULE)))
-  USEMODULE += isrpipe
-endif

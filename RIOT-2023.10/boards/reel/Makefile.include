@@ -1,6 +1,0 @@
-# set programming environment
-OPENOCD_DEBUG_ADAPTER ?= dap
-PROGRAMMER ?= openocd
-
-# use the common nrf52 config for the rest
-include $(RIOTBOARD)/common/nrf52/Makefile.include

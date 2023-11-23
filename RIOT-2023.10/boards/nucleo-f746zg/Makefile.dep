@@ -1,5 +1,0 @@
-ifneq (,$(filter netdev_default,$(USEMODULE)))
-  USEMODULE += stm32_eth
-endif
-
-include $(RIOTBOARD)/common/nucleo/Makefile.dep

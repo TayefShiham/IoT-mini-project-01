@@ -1,2 +1,0 @@
-USEMODULE += bhp_event
-USEMODULE += event_thread

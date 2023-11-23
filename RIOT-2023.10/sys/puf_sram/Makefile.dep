@@ -1,3 +1,0 @@
-USEMODULE += hashes
-USEMODULE += random
-FEATURES_REQUIRED += puf_sram

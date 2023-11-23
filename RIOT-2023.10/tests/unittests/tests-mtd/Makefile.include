@@ -1,3 +1,0 @@
-USEMODULE += mtd
-USEMODULE += mtd_emulated
-USEMODULE += vfs

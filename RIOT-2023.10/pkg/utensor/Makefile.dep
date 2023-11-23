@@ -1,5 +1,0 @@
-FEATURES_REQUIRED += cpp
-FEATURES_REQUIRED += libstdcpp
-
-USEMODULE += utensor-ops
-USEMODULE += utensor-util

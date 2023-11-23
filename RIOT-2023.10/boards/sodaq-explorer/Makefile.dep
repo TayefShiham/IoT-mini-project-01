@@ -1,3 +1,0 @@
-USEMODULE += boards_common_sodaq
-
-include $(RIOTBOARD)/common/sodaq/Makefile.dep

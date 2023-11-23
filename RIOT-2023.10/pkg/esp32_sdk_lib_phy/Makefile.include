@@ -1,3 +1,0 @@
-export ESP32_SDK_LIB_PHY_DIR ?= $(PKGDIRBASE)/esp32_sdk_lib_phy
-
-PSEUDOMODULES += esp32_sdk_lib_phy

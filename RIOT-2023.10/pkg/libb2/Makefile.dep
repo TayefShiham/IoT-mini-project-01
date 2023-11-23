@@ -1,2 +1,0 @@
-# 8bit architectures are not supported by libb2.
-FEATURES_BLACKLIST += arch_8bit

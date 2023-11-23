@@ -1,3 +1,0 @@
-OPENOCD_CONFIG ?= $(RIOTBOARD)/common/blxxxpill/dist/openocd-128kib.cfg
-
-include $(RIOTBOARD)/common/blxxxpill/Makefile.include

@@ -1,5 +1,0 @@
-ifneq (,$(filter disp_dev,$(USEMODULE)))
-  USEMODULE += st7735
-endif
-
-include $(RIOTBOARD)/sipeed-longan-nano/Makefile.dep

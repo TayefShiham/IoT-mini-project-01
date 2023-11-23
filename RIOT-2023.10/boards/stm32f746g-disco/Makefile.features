@@ -1,4 +1,0 @@
-CPU = stm32
-CPU_MODEL = stm32f746ng
-
-include $(RIOTBOARD)/stm32f746g-disco/features-shared.mk

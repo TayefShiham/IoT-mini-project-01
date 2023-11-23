@@ -1,2 +1,0 @@
-USEMODULE += ztimer_usec
-USEMODULE += sched_cb

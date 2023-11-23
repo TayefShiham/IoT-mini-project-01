@@ -1,3 +1,0 @@
-USEMODULE += rust_riotmodules
-
-FEATURES_REQUIRED += periph_i2c

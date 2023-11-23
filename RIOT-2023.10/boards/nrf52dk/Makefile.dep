@@ -1,3 +1,0 @@
-USEMODULE += boards_common_nrf52xxxdk
-
-include $(RIOTBOARD)/common/nrf52xxxdk/Makefile.dep

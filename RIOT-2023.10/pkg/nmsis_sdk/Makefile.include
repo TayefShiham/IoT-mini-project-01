@@ -1,3 +1,0 @@
-PSEUDOMODULES += nmsis_sdk
-
-INCLUDES += -I$(PKGDIRBASE)/nmsis_sdk/NMSIS/Core/Include

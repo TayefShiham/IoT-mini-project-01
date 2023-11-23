@@ -1,5 +1,0 @@
-MODULE = paho-mqtt-packet
-
-CFLAGS += -Wno-unused-parameter
-
-include $(RIOTBASE)/Makefile.base

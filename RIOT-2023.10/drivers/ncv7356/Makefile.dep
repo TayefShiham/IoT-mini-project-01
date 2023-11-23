@@ -1,2 +1,0 @@
-USEMODULE += can_trx
-FEATURES_REQUIRED += periph_gpio

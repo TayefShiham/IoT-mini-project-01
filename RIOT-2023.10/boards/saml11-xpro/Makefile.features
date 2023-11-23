@@ -1,3 +1,0 @@
-CPU_MODEL = saml11e16a
-
-include $(RIOTBOARD)/common/saml1x/Makefile.features

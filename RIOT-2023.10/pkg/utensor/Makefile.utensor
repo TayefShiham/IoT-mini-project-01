@@ -1,5 +1,0 @@
-MODULE = utensor
-
-CXXEXFLAGS += -Wno-unused-parameter
-
-include $(RIOTBASE)/Makefile.base

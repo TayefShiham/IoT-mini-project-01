@@ -1,2 +1,0 @@
-FEATURES_REQUIRED += periph_i2c
-USEMODULE += xtimer

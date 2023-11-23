@@ -1,2 +1,0 @@
-CFLAGS += "-DARDUINO = 100"
-INCLUDES += -I$(PKGDIRBASE)/arduino_adafruit_sensor

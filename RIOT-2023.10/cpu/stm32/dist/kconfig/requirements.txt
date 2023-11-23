@@ -1,2 +1,0 @@
-openpyxl
-jinja2

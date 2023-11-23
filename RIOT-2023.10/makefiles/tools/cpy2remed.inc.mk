@@ -1,6 +1,0 @@
-
-FLASHER ?= $(RIOTTOOLS)/cpy2remed/cpy2remed.sh
-
-FLASHFILE ?= $(HEXFILE)
-
-FFLAGS ?= $(FLASHFILE) $(DIR_NAME_AT_REMED)

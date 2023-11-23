@@ -1,2 +1,0 @@
-TERMPROG  ?= $(RIOTTOOLS)/bmp/bmp.py
-TERMFLAGS ?= $(BMP_OPTIONS) term
