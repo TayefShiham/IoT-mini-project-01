@@ -34,24 +34,61 @@ Note : Don't switch to root to save time,if you do you're going to have a very b
 
 ## Step 1 : Setup MQTT broker
 
-We installed a local MQTT broker called mosquitto with the following command :
+We installed a local MQTT broker called [mosquitto.rsmb](https://github.com/eclipse/mosquitto.rsmb) which is a tiny version of the original [ Mosquitto](https://mosquitto.org/) is that Mosquitto doesn't currently have support for the MQTT-SN protocol,which the RSMB version does. Clone it from the github repository by executing this command :
 
 ```
-sudo apt install mosquitto
+git clone https://github.com/eclipse/mosquitto.rsmb.git
 ```
 
-Note : the DNF PKG Manager might not work with your linux distro,use the native PKG manager of your operating system to install mosquitto.
+Note : Git usually comes preinstalled in most of the Linux distros. If it didn't come with yours and you don't know how to install it,then we suggest that you change your major.
 
-To configure the broker on localhost to transmit data to AWS,execute this command :
-
-```
-sudo nano /etc/mosquitto/conf.d/bridge.conf
-```
-
-This will start the nano text editor which comes pre installed with maximum linux distros. Alternatively you can use VIM but we don't know how to exit it so not recommended. Insert the following configurtion in the text file and don't forget to replace the phaceholders with proper creds from AWS.
+To install the broker on localhost,first navigate to the child directory :
 
 ```
-script here
+cd mosquitto.rsmb/rsmb/src
 ```
 
-Note : Don't forget to save while exiting nano.
+Then start the build process with this command :
+```
+make
+```
+When the build process is finished, make a configuration file to store the script in the same directory.
+```
+nano config.conf
+```
+This will start the nano text editor which comes pre installed with maximum linux distros. Alternatively you can use VIM but we don't know how to exit it so not recommended. Insert the following configurtion in the file editor :
+
+```
+# add some debug output
+trace_output protocol
+# listen for MQTT-SN traffic on UDP port 1885
+listener 1885 INADDR_ANY mqtts
+ipv6 true
+# listen to MQTT connections on tcp port 1886
+listener 1886 INADDR_ANY
+ipv6 true
+```
+
+Note : Don't forget to save the changes while exiting nano. We could add the shortcuts and details but it might offend smart people so we opted to add only the minimum to replicate the process.
+
+After saving the config,start the broker with this command :
+```
+./broker_mqtts config.conf
+```
+
+Note : Be mindful of your current directory in the CLI. If you're in the wrong folder then the command won't work since the terminal won't know what you're talking about.
+
+If you've done everything right, then the CLI output should look exactly like this :
+```
+20231123 093216.766 CWNAN9999I Really Small Message Broker
+20231123 093216.766 CWNAN9998I Part of Project Mosquitto in Eclipse
+(http://projects.eclipse.org/projects/technology.mosquitto)
+20231123 093216.766 CWNAN0049I Configuration file name is config.conf
+20231123 093216.766 CWNAN0053I Version 1.3.0.2, Nov 23 2023 07:57:24
+20231123 093216.766 CWNAN0054I Features included: bridge MQTTS 
+20231123 093216.766 CWNAN9993I Authors: Ian Craggs (icraggs@uk.ibm.com), Nicholas O'Leary
+20231123 093216.766 CWNAN0300I MQTT-S protocol starting, listening on port 1885
+20231123 093216.766 CWNAN0014I MQTT protocol starting, listening on port 1886
+```
+
+Note : The current terminal window is running the program we need to be operational throughout the task,so don't terminate it and use a new terminal window to continue the next step. Take care not to get lost in the process, we will start from the parent folder of this repository.
