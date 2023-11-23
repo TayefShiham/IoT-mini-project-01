@@ -4,7 +4,7 @@
 
 Any machine made after the fall of soviet union should work as long as in can be interfaced with. Here are the specs of the computer we used for this project : 
 
-```
+```bash
              /////////////                tayef@pop-os 
          /////////////////////            ------------- 
       ///////*767////////////////         OS: Pop!_OS 22.04 LTS x86_64 
@@ -36,7 +36,7 @@ Note : Don't switch to root to save time,if you do you're going to have a very b
 
 We installed a local MQTT broker called [mosquitto.rsmb](https://github.com/eclipse/mosquitto.rsmb) which is a tiny version of the original [ Mosquitto](https://mosquitto.org/) is that Mosquitto doesn't currently have support for the MQTT-SN protocol,which the RSMB version does. Clone it from the github repository by executing this command :
 
-```
+```bash
 git clone https://github.com/eclipse/mosquitto.rsmb.git
 ```
 
@@ -44,21 +44,24 @@ Note : Git usually comes preinstalled in most of the Linux distros. If it didn't
 
 To install the broker on localhost,first navigate to the child directory :
 
-```
+```bash
 cd mosquitto.rsmb/rsmb/src
 ```
 
 Then start the build process with this command :
-```
+
+```bash
 make
 ```
+
 When the build process is finished, make a configuration file to store the script in the same directory.
-```
+
+```bash
 nano config.conf
 ```
 This will start the nano text editor which comes pre installed with maximum linux distros. Alternatively you can use VIM but we don't know how to exit it so not recommended. Insert the following configurtion in the file editor :
 
-```
+```c
 # add some debug output
 trace_output protocol
 # listen for MQTT-SN traffic on UDP port 1885
@@ -72,14 +75,16 @@ ipv6 true
 Note : Don't forget to save the changes while exiting nano. We could add the shortcuts and details but it might offend smart people so we opted to add only the minimum to replicate the process.
 
 After saving the config,start the broker with this command :
-```
+
+```bash
 ./broker_mqtts config.conf
 ```
 
 Note : Be mindful of your current directory in the CLI. If you're in the wrong folder then the command won't work since the terminal won't know what you're talking about.
 
 If you've done everything right, then the CLI output should look exactly like this :
-```
+
+```bash
 20231123 093216.766 CWNAN9999I Really Small Message Broker
 20231123 093216.766 CWNAN9998I Part of Project Mosquitto in Eclipse
 (http://projects.eclipse.org/projects/technology.mosquitto)
@@ -97,13 +102,13 @@ Note : The current terminal window is running the program we need to be operatio
 
 Clone the RIOT-OS from the official repository on your localhost :
 
-```
+```bash
 git clone https://github.com/RIOT-OS/RIOT.git
 ```
 
 The repository is quite large with close to 347452 objects so it is likely to take a while depending on your internet speed. The output should look similar to this :
 
-```
+```bash
 Cloning into 'RIOT'...
 remote: Enumerating objects: 347452, done.
 remote: Counting objects: 100% (106992/106992), done.
