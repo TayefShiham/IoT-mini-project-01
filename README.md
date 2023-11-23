@@ -92,3 +92,24 @@ If you've done everything right, then the CLI output should look exactly like th
 ```
 
 Note : The current terminal window is running the program we need to be operational throughout the task,so don't terminate it and use a new terminal window to continue the next step. Take care not to get lost in the process, we will start from the parent folder of this repository.
+
+# Step 2 : RIOT
+
+Clone the RIOT-OS from the official repository on your localhost :
+
+```
+git clone https://github.com/RIOT-OS/RIOT.git
+```
+
+The repository is quite large with close to 347452 objects so it is likely to take a while depending on your internet speed. The output should look similar to this :
+
+```
+Cloning into 'RIOT'...
+remote: Enumerating objects: 347452, done.
+remote: Counting objects: 100% (106992/106992), done.
+remote: Compressing objects: 100% (9742/9742), done.
+remote: Total 347452 (delta 101975), reused 97419 (delta 97243), pack-reused 240460
+Receiving objects: 100% (347452/347452), 130.73 MiB | 1.14 MiB/s, done.
+Resolving deltas: 100% (238801/238801), done.
+Updating files: 100% (15941/15941), done.
+```
