@@ -411,24 +411,9 @@ Rollback to the terminal with the project directory and assign a site-global add
 ```bash
 ifconfig 5 add fec0:affe::99
 ```
-Now that the application interface is open, communication with the broker can be initiated.
+Now that the application interface is open, communication with the broker can be initiated. To connect the application interface with the broker,executte the following command :
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```bash
+start fec0:affe::1 1885 1
+```
+The system should transmitting the sensor logs to the broker once every 5 seconds. 
