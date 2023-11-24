@@ -2,7 +2,7 @@
 
 ## Step 0 : Localhost and Host OS Config
 
-Any machine made after the fall of soviet union should work as long as in can be interfaced with. Here are the specs of the computer we used for this project : 
+Any machine made after the fall of the soviet union should work as long as it can be interfaced with. Here are the specs of the computer we used for this project : 
 
 ```bash
              /////////////                tayef@pop-os 
@@ -34,7 +34,7 @@ Note : Don't switch to root to save time,if you do you're going to have a very b
 
 ## Step 1 : Setup MQTT broker
 
-We installed a local MQTT broker called [mosquitto.rsmb](https://github.com/eclipse/mosquitto.rsmb) which is a tiny version of the original [ Mosquitto](https://mosquitto.org/) is that Mosquitto doesn't currently have support for the MQTT-SN protocol,which the RSMB version does. Clone it from the github repository by executing this command :
+We installed a local MQTT broker called [mosquitto.rsmb](https://github.com/eclipse/mosquitto.rsmb) which is a tiny version of the original [ Mosquitto](https://mosquitto.org/) is that Mosquitto doesn't currently have support for the MQTT-SN protocol,which the RSMB version does. Clone it from the GitHub repository by executing this command :
 
 ```bash
 git clone https://github.com/eclipse/mosquitto.rsmb.git
@@ -59,7 +59,7 @@ When the build process is finished, make a configuration file to store the scrip
 ```bash
 nano config.conf
 ```
-This will start the nano text editor which comes pre installed with maximum linux distros. Alternatively you can use VIM but we don't know how to exit it so not recommended. Insert the following configurtion in the file editor :
+This will start the nano text editor which comes pre-installed with maximum Linux distros. Alternatively, you can use VIM but we don't know how to exit it so not recommended. Insert the following configuration in the file editor :
 
 ```c
 # add some debug output
@@ -401,8 +401,34 @@ After the creation of the bridge, assign a site-global prefix to the tapbr0 inte
 sudo ip a a fec0:affe::1/64 dev tapbr0
 ```
 
-Navigate to the *emcute_MQTTSN* directory and execute this command :
+Navigate to the *emcute_MQTTSN* directory in a new terminal and execute this command :
 
 ```bash
 make all term PORT=tap0
 ```
+Rollback to the terminal with the project directory and assign a site-global address :
+
+```bash
+ifconfig 5 add fec0:affe::99
+```
+Now that the application interface is open, communication with the broker can be initiated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
