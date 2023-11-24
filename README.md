@@ -1,6 +1,6 @@
 # IoT-mini-project-01
 
-## Step 0 : Localhost and Host OS Config
+## Stage 0 : Localhost and Host OS Config
 
 Any machine made after the fall of the soviet union should work as long as it can be interfaced with. Here are the specs of the computer we used for this project : 
 
@@ -32,7 +32,7 @@ The codebase should work out of the box on other Linux systems with DNF,Pacman,Y
 
 Note : Don't switch to root to save time,if you do you're going to have a very bad time later on.
 
-## Step 1 : Setup MQTT broker
+## Stage 1 : MQTT broker
 
 We installed a local MQTT broker called [mosquitto.rsmb](https://github.com/eclipse/mosquitto.rsmb) which is a tiny version of the original [ Mosquitto](https://mosquitto.org/) is that Mosquitto doesn't currently have support for the MQTT-SN protocol,which the RSMB version does. Clone it from the GitHub repository by executing this command :
 
@@ -98,7 +98,7 @@ If you've done everything right, then the CLI output should look exactly like th
 
 Note : The current terminal window is running the program we need to be operational throughout the task,so don't terminate it and use a new terminal window to continue the next step. Take care not to get lost in the process, we will start from the parent folder of this repository.
 
-# Step 2 : RIOT
+# Stage 2 : RIOT
 
 Clone the RIOT-OS from the official repository on your localhost :
 
@@ -416,4 +416,18 @@ Now that the application interface is open, communication with the broker can be
 ```bash
 start fec0:affe::1 1885 1
 ```
-The system should transmitting the sensor logs to the broker once every 5 seconds. 
+The system should transmitting the sensor logs to the broker once every 5 seconds.
+
+# Stage 3 : AWS IoT Cloud
+
+Now that the system is operation and the broker is running, communication with AWS will have to be configured so that the sensor data can be published on a real time dashboard.
+
+Navigate to the *MQTTSN_Client* subdirectory located in the parent directory of the project through the command line interface and execute the following command :
+
+```bash
+python3 MQTTSNbridge.py
+```
+
+This will initiate the uplink to AWS and keep sending data to dashboard. Please be advised that the tranmission will stop if any of the ongoing process nodes are terminated.
+
+Note : Take care not to push the api keys to a public repository. Always store them in a different file then use pointers in your code, and add that file to gitignore. This way the codebase will be fully functional but the api keys won't be pushed to the remote,it will remain in the localhost.
