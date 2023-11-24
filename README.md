@@ -2,7 +2,7 @@
 
 ## Stage 0 : Localhost and Host OS Config
 
-Any machine made after the fall of the soviet union should work as long as it can be interfaced with. Here are the specs of the computer we used for this project : 
+Here are the specs of the computer we used for this project : 
 
 ```bash
              /////////////                tayef@pop-os 
