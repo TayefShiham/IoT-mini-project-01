@@ -28,9 +28,9 @@ Here are the specs of the computer we used for this project :
                                                                   
 ```
 
-The codebase should work out of the box on other Linux systems with DNF,Pacman,YUM and other PKG managers as long as the upcoming steps are followed properly. On Windows NT family OS, please set up the Windows Subsystem for Linux. For MacOS ,please stop reading this and pick a different profession.
+The codebase should work out of the box on other Linux systems with DNF,Pacman,YUM and other PKG managers as long as the upcoming steps are followed properly. On Windows NT family OS, please set up the Windows Subsystem for Linux.
 
-Note : Don't switch to root to save time,if you do you're going to have a very bad time later on.
+Note : Don't switch to root to save time.
 
 ## Stage 1 : MQTT broker
 
@@ -40,7 +40,7 @@ We installed a local MQTT broker called [mosquitto.rsmb](https://github.com/ecli
 git clone https://github.com/eclipse/mosquitto.rsmb.git
 ```
 
-Note : Git usually comes preinstalled in most of the Linux distros. If it didn't come with yours and you don't know how to install it,then we suggest that you change your major.
+Note : Git usually comes preinstalled in most of the Linux distros.
 
 To install the broker on localhost,first navigate to the child directory :
 
@@ -72,7 +72,7 @@ listener 1886 INADDR_ANY
 ipv6 true
 ```
 
-Note : Don't forget to save the changes while exiting nano. We could add the shortcuts and details but it might offend smart people so we opted to add only the minimum to replicate the process.
+Note : Don't forget to save the changes while exiting nano. We opted to add only the minimum to replicate the process.
 
 After saving the config,start the broker with this command :
 
