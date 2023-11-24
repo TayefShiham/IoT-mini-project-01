@@ -380,3 +380,29 @@ int main(void)
 ```
 
 Note : If the parent directory is to be changed for some reson, the **RIOTBASE** properties in the *Makefile* must also be adjusted with the new address.
+
+Make sure that the broker is running in the other terminal and setup the interfaces and the bridge using RIOT's tapsetup script:
+
+```bash
+sudo ./RIOT/dist/tools/tapsetup/tapsetup -c 2
+```
+
+The command should produce this output :
+
+```bash
+creating bridge tapbr0
+creating tap0
+creating tap1
+```
+
+After the creation of the bridge, assign a site-global prefix to the tapbr0 interface:
+
+```bash
+sudo ip a a fec0:affe::1/64 dev tapbr0
+```
+
+Navigate to the *emcute_MQTTSN* directory and execute this command :
+
+```bash
+make all term PORT=tap0
+```
